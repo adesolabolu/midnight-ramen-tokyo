@@ -1,0 +1,471 @@
+Below is the component for your context <!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Midnight Ramen | Authentic Japanese Flavors</title>
+
+  
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;family=Oswald:wght@400;500;700&amp;display=swap" rel="stylesheet">
+
+  <style>
+    .animate-on-scroll-hidden {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .animate-on-scroll-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+<style type="text/tailwindcss">@import "tailwindcss";</style><script src="https://cdn.tailwindcss.com"></script><script>tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        'brand-primary': '#C8553D', // Terracotta/Rust
+        'brand-secondary': '#F2D06B', // Mustard
+        'accent-teal': '#A8D0C8', // Muted Teal
+        'accent-teal-dark': '#2A6F66',
+        'neutral-cream': '#FDF8E8',
+        'neutral-surface': '#F9F1DC', // Light beige for cards
+        'neutral-surface-light': '#FDFDF7',
+        'text-primary': '#222222',
+        'text-secondary': '#666666',
+        'footer-bg': '#4A3B32',
+      },
+      fontFamily: {
+        'primary': ['Oswald', 'sans-serif'],
+        'secondary': ['DM Sans', 'sans-serif'],
+      },
+      borderRadius: {
+        'card': '12px',
+        'pill': '50px',
+      },
+      boxShadow: {
+        'card': '0 4px 20px rgba(0, 0, 0, 0.05)',
+      },
+      spacing: {
+        's': '15px',
+        'm': '30px',
+        'l': '50px',
+      }
+    }
+  }
+}</script></head>
+
+<body class="font-secondary bg-white text-text-primary overflow-x-hidden">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white py-5 shadow-sm">
+    <div class="max-w-[1200px] mx-auto px-5 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0">
+      
+      <div class="flex gap-10">
+        <a href="#" class="font-primary font-medium text-sm tracking-widest hover:text-brand-primary transition-colors">HOME</a>
+        <a href="#" class="font-primary font-medium text-sm tracking-widest hover:text-brand-primary transition-colors">MENU</a>
+      </div>
+
+      <a href="#" class="font-primary font-bold text-2xl tracking-wider text-text-primary flex items-center gap-3">
+        MIDNIGHT RAMEN <i class="fas fa-bowl-food text-brand-primary"></i>
+      </a>
+
+      <div class="flex items-center gap-10">
+        <div class="hidden md:flex gap-10">
+            <a href="#" class="font-primary font-medium text-sm tracking-widest hover:text-brand-primary transition-colors">LOCATIONS</a>
+            <a href="#" class="font-primary font-medium text-sm tracking-widest hover:text-brand-primary transition-colors">CONTACT</a>
+        </div>
+        <div class="flex gap-5 text-lg">
+            <i class="fas fa-search cursor-pointer hover:text-brand-primary transition-colors"></i>
+            <i class="fas fa-shopping-bag cursor-pointer hover:text-brand-primary transition-colors"></i>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-[1200px] mx-auto px-5 pt-5"><section class="mb-5">
+  <div class="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-4">
+    
+    <!-- Left Column -->
+    <div class="flex flex-col gap-4">
+      <!-- Main Text Box -->
+      <div data-animation-on-scroll="" class="bg-neutral-surface rounded-card p-12 flex flex-col justify-center h-full">
+        <h1 class="font-primary text-[3.8rem] leading-[0.95] mb-5 text-text-primary uppercase">
+          The ultimate umami rush you need at 12:00 AM
+        </h1>
+        <p class="text-text-secondary text-sm leading-relaxed max-w-[80%] mb-8">
+          Authentic Tonkotsu broth simmered for 24 hours. Hand-pulled noodles. The comfort food you deserve, delivered hot to your doorstep or ready for pickup.
+        </p>
+        <div class="flex gap-4">
+          <button class="font-primary font-bold text-sm tracking-wider px-8 py-3 border-2 border-text-primary bg-text-primary text-white hover:bg-transparent hover:text-text-primary transition-all uppercase">
+            Order Now
+          </button>
+          <button class="font-primary font-bold text-sm tracking-wider px-8 py-3 border-2 border-text-primary bg-transparent text-text-primary hover:bg-text-primary hover:text-white transition-all uppercase">
+            Our Story
+          </button>
+        </div>
+      </div>
+
+      <!-- Sub Boxes (Hidden on desktop in original CSS grid logic, but here we place them below the main text as per column structure, actually in original CSS grid-row logic put image on right spanning 2 rows. We can achieve this with grid.) -->
+      <!-- Let's adjust the grid to match the complex original layout perfectly. -->
+      <!-- Original: 2 columns. Left col has Main Box + Sub Boxes (grid). Right col is Image spanning all. -->
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <!-- Sub Box 1 -->
+        <div data-animation-on-scroll="" class="bg-brand-secondary rounded-card p-6 min-h-[200px] relative overflow-hidden flex flex-col justify-between group">
+          <h3 class="font-primary text-[1.8rem] leading-[0.9] text-text-primary z-10 relative">RAMEN<br>KITS</h3>
+          <div class="w-9 h-9 border-2 border-text-primary rounded-full flex items-center justify-center text-text-primary z-10">
+            <i class="fas fa-arrow-up transform rotate-45"></i>
+          </div>
+          <img src="https://images.unsplash.com/photo-1623341214825-9f4f963727da?auto=format&amp;fit=crop&amp;q=80&amp;w=300" class="absolute -bottom-5 -right-2 w-32 transform -rotate-12 transition-transform group-hover:rotate-0" alt="Ramen Kit">
+        </div>
+
+        <!-- Sub Box 2 -->
+        <div data-animation-on-scroll="" class="bg-brand-primary rounded-card p-6 min-h-[200px] relative overflow-hidden flex flex-col justify-between group">
+          <h3 class="font-primary text-[1.8rem] leading-[0.9] text-white z-10 relative">RESERVE<br>A TABLE</h3>
+          <div class="w-9 h-9 border-2 border-white rounded-full flex items-center justify-center text-white z-10">
+            <i class="fas fa-arrow-up transform rotate-45"></i>
+          </div>
+          <img src="https://images.unsplash.com/photo-1552611052-33e04de081de?auto=format&amp;fit=crop&amp;q=80&amp;w=300" class="absolute -bottom-5 -right-2 w-32 transform -rotate-12 transition-transform group-hover:rotate-0" alt="Reserve Table">
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column (Image) -->
+    <div class="hidden lg:block bg-gray-200 rounded-card overflow-hidden relative">
+      <img src="https://images.unsplash.com/photo-1591814468924-caf88d1232e1?auto=format&amp;fit=crop&amp;q=80&amp;w=800" class="w-full h-full object-cover" alt="Delicious Ramen">
+    </div>
+
+  </div>
+</section>
+<section class="mb-5">
+  <!-- Pill Header -->
+  <div class="bg-neutral-surface rounded-card px-5 py-3 flex justify-between items-center text-brand-primary font-primary font-bold text-base tracking-wide uppercase mb-4">
+    <span>Made with Tradition</span>
+    <span class="cursor-pointer hover:underline">See All Menu</span>
+  </div>
+  
+  <div class="grid grid-cols-1 lg:grid-cols-[280px_1fr_300px] gap-4 items-stretch">
+    
+    <!-- Left: Features List -->
+    <div class="grid grid-cols-2 gap-2 h-full">
+      <!-- Feature 1 -->
+      <div class="bg-neutral-surface rounded-card p-4 flex flex-col justify-between h-full min-h-[160px]">
+        <i class="fas fa-wind text-brand-primary text-xl mb-3"></i>
+        <div>
+          <h4 class="font-primary text-sm leading-tight mb-2 uppercase">Hakata<br>Style</h4>
+          <p class="text-xs text-text-secondary leading-relaxed">Our signature thin, straight noodles, crafted daily to hold broth perfectly.</p>
+        </div>
+      </div>
+      <!-- Feature 2 -->
+      <div class="bg-neutral-surface rounded-card p-4 flex flex-col justify-between h-full min-h-[160px]">
+        <i class="fas fa-fire text-brand-primary text-xl mb-3"></i>
+        <div>
+          <h4 class="font-primary text-sm leading-tight mb-2 uppercase">24h Batch<br>Roasted</h4>
+          <p class="text-xs text-text-secondary leading-relaxed">Pork bones simmered for 24 hours to achieve maximum creaminess and depth.</p>
+        </div>
+      </div>
+      <!-- Feature 3 -->
+      <div class="bg-neutral-surface rounded-card p-4 flex flex-col justify-between h-full min-h-[160px]">
+        <i class="fas fa-leaf text-brand-primary text-xl mb-3"></i>
+        <div>
+          <h4 class="font-primary text-sm leading-tight mb-2 uppercase">Fresh<br>Greens</h4>
+          <p class="text-xs text-text-secondary leading-relaxed">Farm-fresh negi, crisp bamboo, and seasonal greens sourced locally.</p>
+        </div>
+      </div>
+      <!-- Feature 4 -->
+      <div class="bg-neutral-surface rounded-card p-4 flex flex-col justify-between h-full min-h-[160px]">
+        <i class="fas fa-heart text-brand-primary text-xl mb-3"></i>
+        <div>
+          <h4 class="font-primary text-sm leading-tight mb-2 uppercase">No MSG,<br>Just Love</h4>
+          <p class="text-xs text-text-secondary leading-relaxed">Pure, natural umami extracted from premium kombu and dried shiitake.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Center: Illustration -->
+    <div class="bg-brand-secondary rounded-card overflow-hidden relative min-h-[300px] h-full">
+      <img src="https://images.unsplash.com/photo-1538128844159-f08f41bfb169?q=80&amp;w=1444&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="absolute inset-0 w-full h-full object-cover" alt="Ramen Chef">
+    </div>
+
+    <!-- Right: Menu Highlights -->
+    <div class="flex flex-col gap-2 h-full">
+      <div class="bg-neutral-surface rounded-card p-4 flex items-center gap-4 flex-1">
+        <div class="w-12 h-12 rounded-full overflow-hidden bg-gray-300 flex-shrink-0">
+          <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&amp;fit=crop&amp;q=80&amp;w=150" class="w-full h-full object-cover" alt="Tonkotsu">
+        </div>
+        <div>
+          <h4 class="font-primary text-sm font-bold uppercase">Classic Tonkotsu</h4>
+          <p class="text-xs text-text-secondary">Rich pork broth, chashu, egg.</p>
+        </div>
+      </div>
+      <div class="bg-neutral-surface rounded-card p-4 flex items-center gap-4 flex-1">
+        <div class="w-12 h-12 rounded-full overflow-hidden bg-gray-300 flex-shrink-0">
+          <img src="https://images.unsplash.com/photo-1552611052-33e04de081de?auto=format&amp;fit=crop&amp;q=80&amp;w=150" class="w-full h-full object-cover" alt="Miso">
+        </div>
+        <div>
+          <h4 class="font-primary text-sm font-bold uppercase">Spicy Miso</h4>
+          <p class="text-xs text-text-secondary">Red miso blend, chili oil, corn.</p>
+        </div>
+      </div>
+      <div class="bg-neutral-surface rounded-card p-4 flex items-center gap-4 flex-1">
+        <div class="w-12 h-12 rounded-full overflow-hidden bg-gray-300 flex-shrink-0">
+          <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&amp;fit=crop&amp;q=80&amp;w=150" class="w-full h-full object-cover" alt="Shoyu">
+        </div>
+        <div>
+          <h4 class="font-primary text-sm font-bold uppercase">Tokyo Shoyu</h4>
+          <p class="text-xs text-text-secondary">Clear chicken broth, soy tare.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section data-animation-on-scroll="" class="mb-5 bg-accent-teal rounded-card p-10 text-center">
+  <h2 class="font-primary text-2xl md:text-3xl leading-snug text-text-primary uppercase">
+    Midnight Ramen 
+    <img src="https://cdn-icons-png.flaticon.com/512/3014/3014520.png" class="inline-block w-10 mx-1 align-middle" alt="ramen icon"> 
+    a warm, nostalgic, and earthy — a comforting space where 
+    <i class="fas fa-star text-brand-secondary"></i> 
+    slow moments, handwritten thoughts, and timeless flavors come alive.
+  </h2>
+</section>
+<section class="mb-5">
+  <div class="bg-brand-primary text-white text-center py-3 rounded-t-card font-primary font-bold tracking-widest uppercase">
+    Top Picks Just For You.
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+    
+    <!-- Product 1 -->
+    <div data-animation-on-scroll="" class="bg-neutral-surface rounded-card p-6 flex flex-col relative group">
+      <div class="absolute top-5 left-5 bg-brand-primary text-white text-[0.7rem] font-bold px-2 py-1 uppercase tracking-wider">Best Seller</div>
+      <img src="https://images.unsplash.com/photo-1625189657980-b419b768b0f6?q=80&amp;w=1373&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="h-64 object-contain mix-blend-multiply mb-4" alt="Ramen Kit">
+      <div class="mt-auto">
+        <h4 class="font-primary text-xl mb-4 text-text-primary uppercase">Special Tonkotsu Kit</h4>
+        <div class="flex justify-between items-center pt-4 border-t border-black/10">
+          <span class="font-primary font-bold text-lg">$16.00</span>
+          <button class="bg-transparent border border-text-primary px-4 py-1.5 text-xs font-bold uppercase hover:bg-text-primary hover:text-white transition-colors">
+            Buy Now <i class="fas fa-arrow-right ml-1"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 2 -->
+    <div data-animation-on-scroll="" class="bg-neutral-surface rounded-card p-6 flex flex-col relative group">
+      <div class="absolute top-5 left-5 bg-white text-text-primary text-[0.7rem] font-bold px-2 py-1 uppercase tracking-wider">Spicy</div>
+      <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?q=80&amp;w=880&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="h-64 object-contain mix-blend-multiply mb-4" alt="Spicy Ramen">
+      <div class="mt-auto">
+        <h4 class="font-primary text-xl mb-4 text-text-primary uppercase">Volcano Miso Ramen</h4>
+        <div class="flex justify-between items-center pt-4 border-t border-black/10">
+          <span class="font-primary font-bold text-lg">$18.50</span>
+          <button class="bg-transparent border border-text-primary px-4 py-1.5 text-xs font-bold uppercase hover:bg-text-primary hover:text-white transition-colors">
+            Buy Now <i class="fas fa-arrow-right ml-1"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 3 -->
+    <div data-animation-on-scroll="" class="bg-neutral-surface rounded-card p-6 flex flex-col relative group">
+      <div class="absolute top-5 left-5 bg-white text-text-primary text-[0.7rem] font-bold px-2 py-1 uppercase tracking-wider">Vegan</div>
+      <img src="https://plus.unsplash.com/premium_photo-1723669629687-0e618541c49e?q=80&amp;w=1470&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="h-64 object-contain mix-blend-multiply mb-4" alt="Vegan Ramen">
+      <div class="mt-auto">
+        <h4 class="font-primary text-xl mb-4 text-text-primary uppercase">Creamy Vegan Shio</h4>
+        <div class="flex justify-between items-center pt-4 border-t border-black/10">
+          <span class="font-primary font-bold text-lg">$15.00</span>
+          <button class="bg-transparent border border-text-primary px-4 py-1.5 text-xs font-bold uppercase hover:bg-text-primary hover:text-white transition-colors">
+            Buy Now <i class="fas fa-arrow-right ml-1"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<section class="mb-5">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 h-auto md:h-[400px]">
+    <div data-animation-on-scroll="" class="bg-brand-primary rounded-card p-12 text-white flex flex-col justify-center relative overflow-hidden">
+      <h2 class="font-primary text-5xl leading-[0.9] mb-6 uppercase">Midnight Ramen is Here</h2>
+      <p class="text-sm font-secondary opacity-90 max-w-[80%] mb-8 leading-relaxed">
+        Craving late night comfort? We are open till 3 AM. Order our special takeout kits or grab a seat at the bar. Experience the silence and the slurp.
+      </p>
+      <button class="border-2 border-white text-white px-8 py-2.5 rounded-full font-primary font-bold uppercase tracking-wide bg-transparent hover:bg-white hover:text-brand-primary transition-colors w-fit">
+        Shop Now
+      </button>
+      
+      <!-- Deco Circles -->
+      <div class="absolute -bottom-12 right-6 flex">
+        <div class="w-32 h-32 bg-brand-secondary rounded-full -mr-10"></div>
+        <div class="w-32 h-32 bg-brand-secondary rounded-full"></div>
+      </div>
+    </div>
+    
+    <div class="rounded-card overflow-hidden h-[300px] md:h-auto">
+      <img src="https://images.unsplash.com/photo-1764158156827-0df193e9783c?w=600&amp;auto=format&amp;fit=crop&amp;q=60&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmFtZW4lMjB0YWtlb3V0fGVufDB8fDB8fHww" class="w-full h-full object-cover" alt="Ramen Takeout">
+    </div>
+  </div>
+</section>
+<section class="mb-5">
+  <div class="bg-neutral-surface text-center text-brand-primary font-bold font-primary p-4 rounded-t-card border-b-2 border-black/5 uppercase tracking-wide">
+    What Our Customers Say
+  </div>
+  <div class="bg-neutral-surface rounded-b-card p-10 sm:p-14 relative">
+    <div class="absolute top-1/2 left-4 -translate-y-1/2 w-8 h-8 bg-brand-secondary rounded-full flex items-center justify-center text-white cursor-pointer hover:bg-brand-primary transition-colors">
+      <i class="fas fa-chevron-left"></i>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- User 1 -->
+      <div class="flex flex-col items-center text-center">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-12 h-12 rounded-full object-cover mb-4 shadow-sm" alt="Sarah">
+        <h5 class="font-primary text-sm font-bold mb-2 uppercase">Sarah Jenkins</h5>
+        <p class="text-xs text-text-secondary italic mb-3 leading-relaxed">
+          "The broth is liquid gold. I've never had ramen this good outside of Tokyo. The 12 AM vibe is unmatched."
+        </p>
+        <div class="text-brand-secondary text-xs">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+      </div>
+       <!-- User 2 -->
+      <div class="flex flex-col items-center text-center hidden md:flex">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-12 h-12 rounded-full object-cover mb-4 shadow-sm" alt="Mike">
+        <h5 class="font-primary text-sm font-bold mb-2 uppercase">Mike Tavern</h5>
+        <p class="text-xs text-text-secondary italic mb-3 leading-relaxed">
+          "Perfect for late night cravings. The spicy miso actually has a kick, and the noodles are always al dente."
+        </p>
+        <div class="text-brand-secondary text-xs">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+      </div>
+       <!-- User 3 -->
+      <div class="flex flex-col items-center text-center hidden md:flex">
+        <img src="https://randomuser.me/api/portraits/women/68.jpg" class="w-12 h-12 rounded-full object-cover mb-4 shadow-sm" alt="Anita">
+        <h5 class="font-primary text-sm font-bold mb-2 uppercase">Anita Sharma</h5>
+        <p class="text-xs text-text-secondary italic mb-3 leading-relaxed">
+          "I love the vegan options! Usually vegan broth is thin, but this one is creamy and rich. Highly recommend."
+        </p>
+        <div class="text-brand-secondary text-xs">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="absolute top-1/2 right-4 -translate-y-1/2 w-8 h-8 bg-brand-secondary rounded-full flex items-center justify-center text-white cursor-pointer hover:bg-brand-primary transition-colors">
+      <i class="fas fa-chevron-right"></i>
+    </div>
+  </div>
+</section>
+<section data-animation-on-scroll="" class="mb-5 bg-brand-primary rounded-card p-10 text-center text-white relative overflow-hidden flex flex-col items-center justify-center">
+  <!-- Deco Circles using pseudo-elements logic via spans -->
+  <span class="absolute left-[-50px] top-1/2 -translate-y-1/2 w-[150px] h-[150px] bg-brand-secondary rounded-full"></span>
+  <span class="absolute right-[-50px] top-1/2 -translate-y-1/2 w-[150px] h-[150px] bg-brand-secondary rounded-full"></span>
+
+  <h2 class="relative z-10 font-primary text-3xl mb-3 uppercase">Opt in for exclusive rewards and offers <br class="hidden md:block"> delivered to your WhatsApp</h2>
+  <p class="relative z-10 text-sm opacity-80 mb-6 font-secondary">We never share your details with anyone else. Just pure ramen love.</p>
+  <button class="relative z-10 bg-neutral-surface text-text-primary border-none px-8 py-3 rounded-pill font-primary font-bold uppercase cursor-pointer hover:scale-105 transition-transform">
+    Join Midnight Community
+  </button>
+</section>
+<section class="grid grid-cols-1 md:grid-cols-3 gap-4 h-auto md:h-[320px]">
+  
+  <!-- Left -->
+  <div class="bg-accent-teal rounded-card p-8 flex flex-col justify-center">
+    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-accent-teal-dark mb-6 text-xl">
+      <i class="fas fa-utensils"></i>
+    </div>
+    <h2 class="text-accent-teal-dark font-primary text-[1.8rem] leading-tight mb-4 uppercase">
+      How to prepare<br>your perfect bowl?
+    </h2>
+    <div class="border-t border-black/10 pt-2 space-y-2">
+      <div class="border-b border-black/10 pb-2 font-primary text-sm text-accent-teal-dark">Do good things and good eat.</div>
+      <div class="border-b border-black/10 pb-2 font-primary text-sm text-accent-teal-dark">Boil noodles for exactly 45s</div>
+      <div class="pt-0 font-primary text-sm text-accent-teal-dark">Heat broth to rolling boil</div>
+    </div>
+  </div>
+
+  <!-- Center (Image) -->
+  <div class="rounded-card overflow-hidden h-[300px] md:h-auto">
+    <img src="https://images.unsplash.com/photo-1555126634-323283e090fa?auto=format&amp;fit=crop&amp;q=80&amp;w=600" class="w-full h-full object-cover" alt="Top View Ramen">
+  </div>
+
+  <!-- Right -->
+  <div class="bg-accent-teal-dark rounded-card p-8 flex flex-col justify-center items-center text-center relative overflow-hidden text-white">
+    <div class="absolute -top-5 -right-5 w-[100px] h-[100px] border-[20px] border-white/20 rounded-full"></div>
+    <h2 class="relative z-10 font-primary text-2xl uppercase mb-6 leading-snug">
+      Join our exclusive<br>rewards program
+    </h2>
+    <button class="relative z-10 bg-white text-text-primary px-6 py-2 rounded-full text-xs font-bold flex items-center gap-2 hover:bg-brand-secondary transition-colors uppercase">
+      Take Action Now <i class="fas fa-arrow-circle-right"></i>
+    </button>
+  </div>
+
+</section></main>
+
+  <!-- Footer -->
+  <footer class="bg-footer-bg text-gray-300 pt-16 pb-10 mt-10 rounded-t-card">
+    <div class="max-w-[1200px] mx-auto px-10">
+      <div class="text-center text-white font-primary text-4xl mb-10 pb-5 border-b border-white/10">
+        GET IN TOUCH
+      </div>
+      
+      <div class="flex flex-col md:flex-row justify-between items-center md:items-end gap-10 text-center md:text-left">
+        
+        <!-- Address -->
+        <div class="space-y-4">
+          <p class="text-sm leading-relaxed">
+            <strong class="text-white">Shop 45, Park Street,</strong><br>
+            Kolkata, West Bengal,<br>
+            India, 700016
+          </p>
+          <div class="flex justify-center md:justify-start gap-4 text-white">
+            <i class="fab fa-instagram hover:text-brand-secondary cursor-pointer transition-colors"></i>
+            <i class="fab fa-twitter hover:text-brand-secondary cursor-pointer transition-colors"></i>
+            <i class="fab fa-facebook-f hover:text-brand-secondary cursor-pointer transition-colors"></i>
+          </div>
+        </div>
+        
+        <!-- Mascot -->
+        <div class="text-5xl text-white">
+          <i class="fas fa-bowl-food"></i>
+        </div>
+
+        <!-- Links -->
+        <ul class="flex gap-16 text-right text-sm">
+          <div class="space-y-2">
+            <li class="hover:text-white cursor-pointer transition-colors">About</li>
+            <li class="hover:text-white cursor-pointer transition-colors">All Products</li>
+            <li class="hover:text-white cursor-pointer transition-colors">Contact</li>
+            <li class="hover:text-white cursor-pointer transition-colors">Resources</li>
+          </div>
+          <div class="space-y-2">
+            <li class="hover:text-white cursor-pointer transition-colors">Privacy Policy</li>
+            <li class="hover:text-white cursor-pointer transition-colors">Refund Policy</li>
+            <li class="hover:text-white cursor-pointer transition-colors">FAQs</li>
+          </div>
+        </ul>
+
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-on-scroll-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.05 });
+
+      document.querySelectorAll('[data-animation-on-scroll]').forEach(el => {
+        el.classList.add('animate-on-scroll-hidden');
+        observer.observe(el);
+      });
+    });
+  </script>
+
+
+</body></html>
